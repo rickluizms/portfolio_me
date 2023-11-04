@@ -18,6 +18,10 @@ def resume():
 def projects():
     return render_template('projects.html')
 
+@app.route('/projects/dashboard', methods=['GET'])
+def project_dashboard():
+    return render_template('project-dashboard.html')
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html')
