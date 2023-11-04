@@ -18,15 +18,83 @@ def resume():
 def projects():
     return render_template('projects.html')
 
-@app.route('/projects/dashboard', methods=['GET'])
-def project_dashboard():
-    return render_template('project-dashboard.html')
-
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html')
 
 
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#
+#              V I E W S - P R O J E C T S - D A S H B O A R D S
+#
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+@app.route('/projects/dashboard1', methods=['GET'])
+def project_dashboard1():
+    return render_template('projects/dashboards/dashboard1.html')
+
+@app.route('/projects/dashboard2', methods=['GET'])
+def project_dashboard2():
+    return render_template('projects/dashboards/dashboard2.html')
+
+@app.route('/projects/dashboard3', methods=['GET'])
+def project_dashboard3():
+    return render_template('projects/dashboards/dashboard3.html')
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#
+#              V I E W S - P R O J E C T S - D A T A  S C I E N C E
+#
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+@app.route('/projects/data1', methods=['GET'])
+def project_data1():
+    return render_template('projects/data-science/data1.html')
+
+@app.route('/projects/data2', methods=['GET'])
+def project_data2():
+    return render_template('projects/data-science/data2.html')
+
+@app.route('/projects/data3', methods=['GET'])
+def project_data3():
+    return render_template('projects/data-science/data3.html')
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#
+#              V I E W S - P R O J E C T S - B A C K  E N D
+#
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+@app.route('/projects/dashboard1', methods=['GET'])
+def project_dashboard1():
+    return render_template('projects/dashboards/dashboard1.html')
+
+@app.route('/projects/dashboard2', methods=['GET'])
+def project_dashboard2():
+    return render_template('projects/dashboards/dashboard2.html')
+
+@app.route('/projects/dashboard3', methods=['GET'])
+def project_dashboard3():
+    return render_template('projects/dashboards/dashboard3.html')
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#
+#              V I E W S - P R O J E C T S - F R O N T  E N D
+#
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+@app.route('/projects/dashboard1', methods=['GET'])
+def project_dashboard1():
+    return render_template('projects/dashboards/dashboard1.html')
+
+@app.route('/projects/dashboard2', methods=['GET'])
+def project_dashboard2():
+    return render_template('projects/dashboards/dashboard2.html')
+
+@app.route('/projects/dashboard3', methods=['GET'])
+def project_dashboard3():
+    return render_template('projects/dashboards/dashboard3.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
