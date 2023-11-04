@@ -34,6 +34,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href={{ url_for('static', filename='css/styles.css')}} rel="stylesheet" />
 
+        
+
         <style>
             a {
                 text-decoration: none;
@@ -57,6 +59,79 @@
             .card:hover {
                 transform: scale(1.05);
             }
+
+            .card-project {
+                width: 190px;
+                background: white;
+                padding: .4em;
+                border-radius: 6px;
+                }
+
+            .card-image {
+                background-color: rgb(236, 236, 236);
+                width: 190px;
+                height: 125px;
+                border-radius: 6px 6px 0 0;
+            }
+
+            .card-image:hover {
+            transform: scale(0.98);
+            }
+
+            .category {
+            text-transform: uppercase;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: rgb(63, 121, 230);
+            padding: 10px 7px 0;
+            }
+
+            .category:hover {
+            cursor: pointer;
+            }
+
+            .heading {
+            font-weight: 600;
+            color: rgb(88, 87, 87);
+            padding: 7px;
+            }
+
+            .heading:hover {
+            cursor: pointer;
+            }
+
+            .author {
+            color: gray;
+            font-weight: 400;
+            font-size: 11px;
+            padding-top: 20px;
+            }
+
+            .name {
+            font-weight: 600;
+            }
+
+            .name:hover {
+            cursor: pointer;
+            }
+
+            /* Reduz o tamanho da área clicável dos botões de controle do carrossel */
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 15px; /* Define a largura desejada */
+                height: 100%; /* Mantém a altura completa */
+                background: transparent; /* Torna o fundo transparente para esconder o excesso */
+                border: none; /* Remove a borda */
+                outline: none; /* Remove a borda quando focado */
+            }
+
+            /* Define a cor e o tamanho da seta (ícone) */
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                font-size: 24px; /* Tamanho da seta (ícone) */
+                color: #000; /* Cor da seta (ícone) */
+            }
+
 
 
         </style>
