@@ -66,17 +66,17 @@ def project_data3():
 #
 # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-@app.route('/projects/dashboard1', methods=['GET'])
-def project_dashboard1():
-    return render_template('projects/dashboards/dashboard1.html')
+@app.route('/projects/backend1', methods=['GET'])
+def project_backend1():
+    return render_template('projects/back-endfrontend/backend1.html')
 
-@app.route('/projects/dashboard2', methods=['GET'])
-def project_dashboard2():
-    return render_template('projects/dashboards/dashboard2.html')
+@app.route('/projects/backend2', methods=['GET'])
+def project_backend2():
+    return render_template('projects/back-endfrontend/backend2.html')
 
-@app.route('/projects/dashboard3', methods=['GET'])
-def project_dashboard3():
-    return render_template('projects/dashboards/dashboard3.html')
+@app.route('/projects/backend3', methods=['GET'])
+def project_backend3():
+    return render_template('projects/back-end/backend3.html')
 
 # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 #
@@ -84,17 +84,17 @@ def project_dashboard3():
 #
 # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-@app.route('/projects/dashboard1', methods=['GET'])
-def project_dashboard1():
-    return render_template('projects/dashboards/dashboard1.html')
+@app.route('/projects/frontend1', methods=['GET'])
+def project_frontend1():
+    return render_template('projects/front-end/frontend1.html')
 
-@app.route('/projects/dashboard2', methods=['GET'])
-def project_dashboard2():
-    return render_template('projects/dashboards/dashboard2.html')
+@app.route('/projects/frontend2', methods=['GET'])
+def project_frontend2():
+    return render_template('projects/front-end/frontend2.html')
 
-@app.route('/projects/dashboard3', methods=['GET'])
-def project_dashboard3():
-    return render_template('projects/dashboards/dashboard3.html')
+@app.route('/projects/frontend3', methods=['GET'])
+def project_frontend3():
+    return render_template('projects/front-end/frontend3.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
