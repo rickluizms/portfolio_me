@@ -68,11 +68,11 @@ def project_data3():
 
 @app.route('/projects/backend1', methods=['GET'])
 def project_backend1():
-    return render_template('projects/back-endfrontend/backend1.html')
+    return render_template('projects/back-end/backend1.html')
 
 @app.route('/projects/backend2', methods=['GET'])
 def project_backend2():
-    return render_template('projects/back-endfrontend/backend2.html')
+    return render_template('projects/back-end/backend2.html')
 
 @app.route('/projects/backend3', methods=['GET'])
 def project_backend3():
@@ -98,5 +98,3 @@ def project_frontend3():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
-# Subir em HEROKU
