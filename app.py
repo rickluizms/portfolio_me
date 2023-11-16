@@ -96,5 +96,20 @@ def project_frontend2():
 def project_frontend3():
     return render_template('projects/front-end/frontend3.html')
 
+
+
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#
+#              V I E W S - P R O J E C T S - T E S T E S
+#
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+@app.route('/bootstrap', methods=['GET'])
+def project_bootstrap():
+    return render_template('bootstrap.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
