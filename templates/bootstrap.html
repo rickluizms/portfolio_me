@@ -130,27 +130,39 @@
         <div class="row gx-5 text-center">
             <div class="col-lg-4 mb-5">
                 <h6 class="mb-3">Demo 1 - Sales Report (Power BI)</h6>
-                <a class="d-block rounded-3 lift lift-lg" href="/projects/dashboard1"><img class="img-fluid rounded-3" src="../static/assets/dio01.png"></a>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard1')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
             </div>
             <div class="col-lg-4 mb-5">
                 <h6 class="mb-3">Demo 2 - Crypto Dashboard (Power BI)</h6>
-                <a class="d-block rounded-3 lift lift-lg" href="landing-app-mobile.html"><img class="img-fluid rounded-3" src="../static/assets/dio02.png"></a>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard2')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio02.png">
+                </a>
             </div>
             <div class="col-lg-4 mb-5">
                 <h6 class="mb-3">Demo 3 - School Analytics Dashboard (Power BI)</h6>
-                <a class="d-block rounded-3 lift lift-lg" href="landing-app-desktop.html"><img class="img-fluid rounded-3" src="../static/assets/didata-dashboard-n3.png"></a>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard3')">
+                    <img class="img-fluid rounded-3" src="../static/assets/didata-dashboard-n3.png">
+                </a>
             </div>
             <div class="col-lg-4 mb-5">
                 <h6 class="mb-3">Demo 4 - Sales Report (Qlick)</h6>
-                <a class="d-block rounded-3 lift lift-lg" href="/projects/dashboard2"><img class="img-fluid rounded-3" src="../static/assets/didata-dashboard-n3.png"></a>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard4')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
             </div>
             <div class="col-lg-4 mb-5">
-                <h6 class="mb-3">Demo 4 - Financial Report (Tableu)</h6>
-                <a class="d-block rounded-3 lift lift-lg" href="landing-app-desktop.html"><img class="img-fluid rounded-3" src="../static/assets/didata-dashboard-n3.png"></a>
+                <h6 class="mb-3">Demo 5 - Financial Report (Tableu)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard5')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
             </div>
             <div class="col-lg-4 mb-5">
-                <h6 class="mb-3">Demo 4 - Dynamic Dashboard (Bootstrap)</h6>
-                <a class="d-block rounded-3 lift lift-lg" href="landing-app-desktop.html"><img class="img-fluid rounded-3" src="../static/assets/didata-dashboard-n3.png"></a>
+                <h6 class="mb-3">Demo 6 - Dynamic Dashboard (Bootstrap)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard6')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
             </div>
         </div>
     </div>
@@ -229,5 +241,63 @@
         </div>
     </div>
 </section>
+  
+  <!-- Modal Dashboards -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Dashboard</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder">Dashboard Financeiro</h1>
+                    <p class="lead fw-normal text-muted mb-0">Desafio de projeto - DIO</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+
+                    <iframe title="Report Section" id="dashboardIframe" width="1024" height="704" src="" frameborder="0" allowFullScreen="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    function openDashboardModal(projectId) {
+        var iframe = document.getElementById('dashboardIframe');
+
+        // Mapeie os identificadores dos projetos para os URLs correspondentes
+        var projectUrls = {
+            'dashboard1': 'https://app.powerbi.com/view?r=eyJrIjoiMjJhYmEwZWQtOTFjNC00NjNmLWJlYTctMDZlMDFjYjE0NDY5IiwidCI6ImFlZmFkM2YxLWJiYzAtNDZhYi04NTk5LWI2Mjg4NzczYjQ3YiJ9',
+            'dashboard2': 'https://app.powerbi.com/view?r=eyJrIjoiYWU2NjNkN2ItZmJkMS00NWFmLWEzNWQtODEyNTgzZjczZjYyIiwidCI6ImFlZmFkM2YxLWJiYzAtNDZhYi04NTk5LWI2Mjg4NzczYjQ3YiJ9',
+            'dashboard3': 'https://app.powerbi.com/view?r=eyJrIjoiZDk2N2NjYzEtYWQ2Yi00NGVhLTk0MjctNzNjYzM1MTRkMTRiIiwidCI6ImFlZmFkM2YxLWJiYzAtNDZhYi04NTk5LWI2Mjg4NzczYjQ3YiJ9',
+            'dashboard4': '',
+            'dashboard5': '',
+            'dashboard6': '',
+        };
+
+        // Verifique se há um URL correspondente para o projeto
+        if (projectUrls.hasOwnProperty(projectId)) {
+            // Atualize dinamicamente o atributo src do iframe com o URL do projeto
+            iframe.src = projectUrls[projectId];
+
+            // Abra o modal
+            $('#exampleModal').modal('show');
+        } else {
+            // Caso o identificador do projeto não seja encontrado, você pode lidar com isso conforme necessário
+            console.error('URL do projeto não encontrado para o identificador:', projectId);
+        }
+    }
+</script>
+
 
 {% endblock %}
