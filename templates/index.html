@@ -1,186 +1,303 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-    <!-- Header-->
-    <header class="py-5">
-        <div class="container px-5 pb-5">
+<header class="page-header-ui page-header-ui-light bg-white" id="home">
+    <div class="page-header-ui-content pt-5">
+        <div class="container px-5">
             <div class="row gx-5 align-items-center">
-                <div class="col-xxl-5">
-                    <!-- Header text content-->
-                    <div class="text-center text-xxl-start">
-                        <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Data Science &middot; Back-End &middot; Front-End</div></div>
-                        <div class="fs-3 fw-light text-muted">I can help your business to</div>
-                        <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Get online and grow fast</span></h1>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" onclick="redirectToResume()" >Resume</a>
-                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" onclick="redirectToProjects()" >Projects</a>
-                        </div>
+                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+                    <h1 class="page-header-ui-title">Conduzindo a Inovação por Meio da Ciência de Dados</h1>
+                    <p class="page-header-ui-text mb-5">Explore meu portfólio e veja como a inovação é alimentada por análises de dados sólidas, impulsionando o crescimento e a eficiência operacional.</p>
+                    <div class="d-flex flex-column flex-sm-row">
+                        <a class="btn btn-lg btn-primary fw-500 me-sm-3 mb-3 mb-sm-0" href="#projects">
+                            Projetos
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a class="btn btn-lg btn-primary-soft text-primary fw-500" href="#resume">Sobre Mim</a>
                     </div>
                 </div>
-                <div class="col-xxl-7">
-                    <!-- Header profile picture-->
-                    <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                        <div class="profile bg-gradient-primary-to-secondary">
-                            <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
-                            <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                            <img class="profile-img" src="../static/assets/profile_me.png" alt="..." />
-                            <div class="dots-1">
-                                <!-- SVG Dots-->
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                        <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                        <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                        <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                        <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                        <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                        <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                        <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                        <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                        <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                        <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                        <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                        <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                        <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                        <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                        <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                        <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                        <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                    </g>
-                                </svg>
-                                <!-- END of SVG dots-->
-                            </div>
-                            <div class="dots-2">
-                                <!-- SVG Dots-->
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                        <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                        <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                        <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                        <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                        <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                        <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                        <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                        <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                        <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                        <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                        <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                        <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                        <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                        <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                        <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                        <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                        <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                    </g>
-                                </svg>
-                                <!-- END of SVG dots-->
-                            </div>
-                            <div class="dots-3">
-                                <!-- SVG Dots-->
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                        <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                        <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                        <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                        <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                        <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                        <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                        <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                        <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                        <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                        <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                        <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                        <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                        <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                        <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                        <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                        <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                        <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                    </g>
-                                </svg>
-                                <!-- END of SVG dots-->
-                            </div>
-                            <div class="dots-4">
-                                <!-- SVG Dots-->
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                        <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                        <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                        <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                        <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                        <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                        <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                        <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                        <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                        <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                        <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                        <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                        <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                        <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                        <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                        <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                        <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                        <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                    </g>
-                                </svg>
-                                <!-- END of SVG dots-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-lg-6 d-none d-lg-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="../static/assets/home-img.jpg" alt="..."></div>
             </div>
         </div>
-    </header>
-    <!-- About Section-->
-    <section class="bg-light py-5">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-xxl-8">
-                    <div class="text-center my-5">
-                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                        <p class="lead fw-light mb-4">Eu sou o Luiz Ricardo, e trabalho com Data Science.</p>
-                        <p class="text-muted">Data Science é a disciplina que se dedica à extração de conhecimento e insights a partir de dados. Podendo orientar decisões estratégicas em áreas que vão desde negócios até pesquisa científica.</p>
-                        <div class="d-flex justify-content-center fs-2 gap-4">
-                            <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-                            <a class="text-gradient" href="https://github.com/rickluizms"><i class="bi bi-linkedin"></i></a>
-                            <a class="text-gradient" href="https://www.linkedin.com/in/rickluizms"><i class="bi bi-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <!-- Rounded SVG Border-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+            <!-- Ajustei os valores no path para alterar a curvatura vertical -->
+            <path d="M144.54,17.34H0V0H144.54ZM0,0S20,6,70.27,6,144.54,0,144.54,0"></path>
+        </svg>
+    </div>
+</header>
 
-    <!-- Credit Section-->
-    <section class="bg-light py-5">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-xxl-8">
-                    <div class="text-center my-5">
-                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Agradecimentos</span></h2>
-                        <p class="lead fw-light mb-4">Para o desenvolvimento desse site, utilizei recursos de outros autores.</p>
-                        <p class="text-muted">Segue abaixo a lista de itens utilizados no projeto:</p>
-                        <!-- Icone Python -->
-                        <a href="https://www.flaticon.com/free-icons/python" title="python icons">Python icons created by Freepik - Flaticon</a>
-                        <div class="d-flex justify-content-center fs-2 gap-4">
-                        </div>
+<!-- SESSAO CURRICULO -->
+
+<section class="page-section" id="resume">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Sobre Mim</h2>
+            <h3 class="section-subheading text-muted">Linha do tempo da minha carreira profissional.</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2017 - 2018</h4>
+                        <h4 class="subheading">O Começo</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Iniciei minha carreira como estagiário na Caixa Econômica Federal, onde, de maneira indireta, tive meu primeiro contato com programação através do meu superior. Esta experiência proporcionou-me uma sólida base nos processos bancários e financeiros.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2019 - 2020</h4>
+                        <h4 class="subheading">Descoberta</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Ao concluir meu estágio na Caixa, busquei expandir meus conhecimentos financeiros e iniciar minha jornada acadêmica. Neste período, atuei como analista fiscal, aprofundando-me em conhecimentos financeiros e tendo meu primeiro contato com Excel e banco de dados. Foi uma fase crucial para minha interação inicial com dados.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline">
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2023 - 2024</h4>
+                        <h4 class="subheading">Aprimoramento</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Durante meu último ano da faculdade, tive o privilégio de realizar um estágio na escola Nova Didata, aplicando conceitos de Ciência de Dados a um contexto de negócios tangível. Esta experiência solidificou meu entendimento prático e proporcionou uma visão concreta sobre a aplicação da ciência de dados.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2024</h4>
+                        <h4 class="subheading">Encerrando um Ciclo</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Com a conclusão da graduação em Ciência de Dados pela Unifran em 2023, encerro um ciclo acadêmico significativo. Agora, estou ansioso para aplicar de forma prática os conhecimentos adquiridos e embarcar em uma nova jornada profissional, contribuindo para desafios emocionantes e oportunidades de crescimento.</p>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="timeline-image"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Próximo</h4>
+                        <h4 class="subheading">Em Busca de Novos Desafios</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Atualmente, estou em busca de uma nova oportunidade profissional onde possa aplicar e expandir meus conhecimentos em Ciência de Dados. Estou entusiasmado para contribuir com minha experiência e habilidades em um ambiente desafiador e inovador. Juntos, podemos explorar novas possibilidades e impulsionar o sucesso mútuo.</p>
+                    </div>
+                </div>
+            </li>   
+            </ul>
+            </div>
+            </section>
+
+<div class="svg-border-rounded text-white">
+    <!-- Rounded SVG Border-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+        <!-- Ajustei os valores no path para alterar a curvatura vertical -->
+        <path d="M144.54,17.34H0V0H144.54ZM0,0S20,6,70.27,6,144.54,0,144.54,0"></path>
+    </svg>
+</div>
+
+<!-- SESSAO PROJETOS  -->
+
+<section class="bg-white py-0" id="projects">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            
+            <div class="col-lg-8">
+                <div class="text-center mb-10">
+                    <h2 class="section-heading text-uppercase mb-5">Projetos</h2>
+                    <div class="badge rounded-pill bg-primary-soft text-primary badge-marketing mb-3">6 Demos!</div>
+                    <h2>Dashboards</h2>
+                    <p class="lead">Dashboards financeiros feitos sob demanda</p>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row gx-5 text-center">
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 1 - Sales Report (Power BI)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard1')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 2 - Crypto Dashboard (Power BI)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard2')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio02.png">
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 3 - School Analytics Dashboard (Power BI)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard3')">
+                    <img class="img-fluid rounded-3" src="../static/assets/didata-dashboard-n3.png">
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 4 - Sales Report (Qlick)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard4')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 5 - Financial Report (Tableu)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard5')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 6 - Dynamic Dashboard (Bootstrap)</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="javascript:void(0);" onclick="openDashboardModal('dashboard6')">
+                    <img class="img-fluid rounded-3" src="../static/assets/dio01.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <!-- Rounded SVG Border-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+            <!-- Ajustei os valores no path para alterar a curvatura vertical -->
+            <path d="M144.54,17.34H0V0H144.54ZM0,0S20,6,70.27,6,144.54,0,144.54,0"></path>
+        </svg>
+    </div>
+</section>
+
+
+<section class="bg-light py-0">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-10">
+                    <div class="badge rounded-pill bg-primary-soft text-primary badge-marketing mb-3">12 Demos!</div>
+                    <h2>Ciência de Dados</h2>
+                    <p class="lead">Projetos de ciência de dados aplicado a negócios</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5 text-center">
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 1 - Heart Attack Detection</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="header-basic.html"><img class="img-fluid rounded-3" src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-ui-kit-pro/header-basic.png"></a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 2 - Credit Card Fraud Detection</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="header-basic-signup.html"><img class="img-fluid rounded-3" src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-ui-kit-pro/header-basic-signup.png"></a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 3 - Credit Card Approval Prediction</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="header-graphic.html"><img class="img-fluid rounded-3" src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-ui-kit-pro/header-graphic.png"></a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 4 - Data Warehouse</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="header-graphic-signup.html"><img class="img-fluid rounded-3" src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-ui-kit-pro/header-graphic-signup.png"></a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 5 - Data ETL Pipeline PySpark</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="header-inner-page.html"><img class="img-fluid rounded-3" src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-ui-kit-pro/header-inner-page.png"></a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h6 class="mb-3">Demo 6 - Data ETL Pipeline With ChatGPT</h6>
+                <a class="d-block rounded-3 lift lift-lg" href="header-nav-only.html"><img class="img-fluid rounded-3" src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-ui-kit-pro/header-nav-only.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-white">
+        <!-- Rounded SVG Border-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+            <!-- Ajustei os valores no path para alterar a curvatura vertical -->
+            <path d="M144.54,17.34H0V0H144.54ZM0,0S20,6,70.27,6,144.54,0,144.54,0"></path>
+        </svg>
+    </div>
+</section>
+
+<section class="bg-white py-5" id="contact">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xxl-8">
+                <div class="text-center my-5">
+                    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Contato</span></h2>
+                    <p class="lead fw-light mb-4">Me encontre nas redes sociais</p>
+                    <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis libero magni consectetur, quia dicta voluptatem reiciendis beatae rem autem. Ducimus hic ratione ea facere, praesentium reiciendis distinctio molestias numquam architecto.</p>
+                    <div class="d-flex justify-content-center fs-2 gap-4">
+                        <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
+                        <a class="text-gradient" href="https://www.linkedin.com/in/rickluizms"><i class="bi bi-linkedin"></i></a>
+                        <a class="text-gradient" href="https://github.com/rickluizms"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+  
+  <!-- Modal Dashboards -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Dashboard</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder">Dashboard Financeiro</h1>
+                    <p class="lead fw-normal text-muted mb-0">Desafio de projeto - DIO</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+
+                    <iframe title="Report Section" id="dashboardIframe" width="1024" height="704" src="" frameborder="0" allowFullScreen="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    function openDashboardModal(projectId) {
+        var iframe = document.getElementById('dashboardIframe');
+
+        // Mapeie os identificadores dos projetos para os URLs correspondentes
+        var projectUrls = {
+            'dashboard1': 'https://app.powerbi.com/view?r=eyJrIjoiMjJhYmEwZWQtOTFjNC00NjNmLWJlYTctMDZlMDFjYjE0NDY5IiwidCI6ImFlZmFkM2YxLWJiYzAtNDZhYi04NTk5LWI2Mjg4NzczYjQ3YiJ9',
+            'dashboard2': 'https://app.powerbi.com/view?r=eyJrIjoiYWU2NjNkN2ItZmJkMS00NWFmLWEzNWQtODEyNTgzZjczZjYyIiwidCI6ImFlZmFkM2YxLWJiYzAtNDZhYi04NTk5LWI2Mjg4NzczYjQ3YiJ9',
+            'dashboard3': 'https://app.powerbi.com/view?r=eyJrIjoiZDk2N2NjYzEtYWQ2Yi00NGVhLTk0MjctNzNjYzM1MTRkMTRiIiwidCI6ImFlZmFkM2YxLWJiYzAtNDZhYi04NTk5LWI2Mjg4NzczYjQ3YiJ9',
+            'dashboard4': '',
+            'dashboard5': '',
+            'dashboard6': '',
+        };
+
+        // Verifique se há um URL correspondente para o projeto
+        if (projectUrls.hasOwnProperty(projectId)) {
+            // Atualize dinamicamente o atributo src do iframe com o URL do projeto
+            iframe.src = projectUrls[projectId];
+
+            // Abra o modal
+            $('#exampleModal').modal('show');
+        } else {
+            // Caso o identificador do projeto não seja encontrado, você pode lidar com isso conforme necessário
+            console.error('URL do projeto não encontrado para o identificador:', projectId);
+        }
+    }
+</script>
 
 
 {% endblock %}
