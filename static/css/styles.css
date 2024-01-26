@@ -11210,7 +11210,7 @@ header.masthead .masthead-heading {
   .timeline > li .timeline-image {
     width: 18px;
     height: 18px;
-    margin-left: -5px;
+    margin-left: -9px;
   }
   .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
     font-size: 18px;
@@ -11238,6 +11238,17 @@ header.masthead .masthead-heading {
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline > li .timeline-image {
+    width: 18px;
+    height: 18px;
+    margin-left: 1.9rem;
+  }
+  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+    margin-top: 40px;
   }
 }
 .team-member {
