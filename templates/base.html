@@ -49,6 +49,23 @@
             }
 
         </style>
+
+        <style>
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 60.66%; /* proporção de 16:9 (calcule como 9 dividido por 16 multiplicado por 100) */
+                overflow: hidden;
+            }
+
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
         
 
     </head>
@@ -57,13 +74,7 @@
         
 
         <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="/"><span class="fw-bolder text-primary">Luiz Ricardo</span></a>
-                    </div>
-                </div>
-            </nav>
+
 
     {% block content %}
 
