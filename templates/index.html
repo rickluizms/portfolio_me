@@ -298,23 +298,15 @@
 
   <!--Cookie Consent-->
   <script>
-    $(document).ready(function () {
-        if (!localStorage.getItem("consentGranted")) {
-            $('#cookies-card').fadeIn();
-        }
-    });
 
-    function acceptCookies() {
-        localStorage.setItem("consentGranted", "true");
+    function loadTag() {
         function gtag() { dataLayer.push(arguments); }
-
         gtag('consent', 'update', {
             ad_user_data: 'granted',
             ad_personalization: 'granted',
             ad_storage: 'granted',
             analytics_storage: 'granted'
         });
-
         // Load gtag.js script.
         var gtagScript = document.createElement('script');
         gtagScript.async = true;
@@ -322,7 +314,19 @@
 
         var firstScript = document.getElementsByTagName('script')[0];
         firstScript.parentNode.insertBefore(gtagScript,firstScript);
+    }
 
+    $(document).ready(function () {
+        if (!localStorage.getItem("consentGranted")) {
+            $('#cookies-card').fadeIn();
+        } else {
+            loadTag()
+            }
+    });
+
+    function acceptCookies() {
+        localStorage.setItem("consentGranted", "true");
+        loadTag()
         $('#cookies-card').fadeOut();
     }
     function rejectCookies() {
